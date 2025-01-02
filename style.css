@@ -318,7 +318,7 @@ main section form button::after{
     top: 50%;
     left: 110%;
     transform: translate(-50%, -50%) rotateZ(45deg);
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: chekboxsrgba(245, 245, 245, 0.5);
 }
 main section form button:hover::before{
     left: 110%;
@@ -371,4 +371,16 @@ footer div i:hover ~ label{
     background-color: #fff;
     color: #000;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.checkbox{
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    color:rgb(212, 212, 212);
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+.checkbox input{
+    width: 10px;
 }
