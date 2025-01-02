@@ -193,12 +193,29 @@ div.feedbacks-container{
     padding: 20px;
     border-radius: 15px;
 }
+div.feedbacks-container > div.card{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    height: 200px;
+    background: rgba(33, 41, 51, 0.75);
+    color: #fff;
+    border: 2px solid rgba(245, 245, 245, 0.75);
+    padding: 10px;
+    border-radius: 10px;
+}
 div.feedbacks-container > div.card > div.feedback-actions{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 60%;
+    width: 100%;
 }
 div.card > div.feedback-actions > button{
     flex: 1;
@@ -226,6 +243,10 @@ main section#FeedBack{
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+main section#FeedBack h2{
+    color: #fff;
+    font-size: 3rem;
 }
 main section#FeedBack > div.cards-container{
     display: flex;
