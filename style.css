@@ -348,7 +348,7 @@ main section form button::after{
     top: 50%;
     left: 110%;
     transform: translate(-50%, -50%) rotateZ(45deg);
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: chekboxsrgba(245, 245, 245, 0.5);
 }
 main section form button:hover::before{
     left: 110%;
@@ -402,7 +402,20 @@ footer div i:hover ~ label{
     color: #000;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
-a{
-    text-decoration: none;
-    color: #000;
+.checkbox input{
+    width: 10px;
+    
+}
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(212, 212, 212);
+}
+
+#Contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
