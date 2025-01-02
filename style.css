@@ -350,7 +350,7 @@ main section form button::after{
     top: 50%;
     left: 110%;
     transform: translate(-50%, -50%) rotateZ(45deg);
-    background-color: chekboxsrgba(245, 245, 245, 0.5);
+    background-color:rgba(245, 245, 245, 0.5);
 }
 main section form button:hover::before{
     left: 110%;
@@ -405,8 +405,7 @@ footer div i:hover ~ label{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .checkbox input{
-    width: 10px;
-    
+    width: 20px;
 }
 .checkbox{
     display: flex;
@@ -421,13 +420,9 @@ footer div i:hover ~ label{
     align-items: center;
     flex-wrap: wrap;
 }
-.card img{
-    height: 350px;
-}
 #Projects{
     display: flex;
     flex-direction: column;
-
 }
 #Projects h2{
     position: sticky;
@@ -438,4 +433,64 @@ footer div i:hover ~ label{
     color: rgba(255, 255, 255, 0.375);
     filter: drop-shadow(0px 0px 5px white);
 }
-
+#Projects > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+#Projects > div > div.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius:15px;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    background: rgba(33, 41, 51,.8);
+    backdrop-filter: blur(10px);
+}
+#Projects > div > div.card img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(0px 0px 5px rgba(36, 36, 36, 0.5));
+}
+#Projects > div > div.card div{
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: linear-gradient(45deg, rgba(33, 41, 51, 0.75),rgba(199, 199, 199, 0.4));
+    backdrop-filter: blur(10px);
+}
+#Projects > div > div.card:hover > div{
+    bottom: 0;
+}
+#Projects > div > div.card h3{
+    color: #fff;
+    font-size: 1.5rem;
+}
+#Projects > div > div.card a{
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+footer a{
+    text-decoration: none;
+    color: #000;
+}
