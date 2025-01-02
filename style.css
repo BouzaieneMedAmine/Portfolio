@@ -183,7 +183,17 @@ main section#Skills div div.card img{
     height: 200px;
     filter: drop-shadow(0px 0px 5px rgba(36, 36, 36, 0.5));
 }
-div.card > div.feedback-actions{
+div.feedbacks-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+div.feedbacks-container > div.card > div.feedback-actions{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,8 +256,7 @@ main section#FeedBack > div.cards-container div.card{
     border-radius: 10px;
 }
 main section form{
-    min-width: 300px;
-    max-width: 500px;
+    width: clamp(300px, 100%, 500px);
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -282,7 +291,7 @@ main section form :where(div input,div textarea){
     background-color: transparent;
 }
 main section form :where(div input,div textarea):focus{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(163, 163, 163, 0.75);
 }
 main section form div textarea{
     width: 100%;
@@ -371,16 +380,4 @@ footer div i:hover ~ label{
     background-color: #fff;
     color: #000;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-.checkbox{
-    width: 30px;
-    display: flex;
-    flex-direction: row;
-    color:rgb(212, 212, 212);
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-.checkbox input{
-    width: 10px;
 }
