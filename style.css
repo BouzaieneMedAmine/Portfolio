@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(33, 41, 51) ;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(33, 41, 51, 0.75);
+    color: #fff;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+header nav ul li a.anchor{
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.5);
+    position: relative;
+}
+header nav ul li a.anchor::before{
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+header nav ul li a.anchor:where(a.active,:hover)::before{
+    width: 100%;
+    transition: width .5s;
+}
+main{
+    width: 100%;
+    height: fit-content;
+    padding-top: 100px;
+}
+main section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+main section#AboutMe{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+main section#AboutMe div{
+    width: clamp(300px, 100%, 500px);
+}
+main section#AboutMe div img{
+    width: 100%;
+    filter: drop-shadow(0px 0px 5px rgba(36, 36, 36, 0.5));
+}
+main section#AboutMe div h2{
+    color: #fff;
+    font-size: 1.75rem;
+}
+main section#AboutMe div p{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.25rem;
+}
+main section#Skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    position: relative;
+}
+main section#Skills h2{
+    position: sticky;
+    top: 100px;
+    left: 0;
+    font-size: 5rem;
+    z-index: -10;
+}
+main section#Skills div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    flex-wrap: wrap;
+}
+main section#Skills div div.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top: 3px solid rgba(245, 245, 245, 0.75);
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+    border-left: 3px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+    border-radius:15px;
+    padding: 10px;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    background: rgba(33, 41, 51,.8);
+    backdrop-filter: blur(10px);
+}
+main section#Skills div div.card > div.progress{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    background: linear-gradient(-45deg, transparent, #3f667f);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+main section#Skills div div.card:nth-child(1) > div.progress{
+    height: 95%;
+}
+main section#Skills div div.card:nth-child(2) > div.progress{
+    height: 70%;
+}
+main section#Skills div div.card:nth-child(3) > div.progress{
+    height: 60%;
+}
+main section#Skills div div.card:nth-child(4) > div.progress{
+    height: 75%;
+}
+main section#Skills div div.card:nth-child(5) > div.progress{
+    height: 90%;
+}
+main section#Skills div div.card:hover > div.progress{
+    bottom: 0;
+}
+main section#Skills div div.card:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0px 0px 10px rgba(197, 197, 197, 0.5);
+    filter: brightness(1);
+}
+main section#Skills div div.card img{
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(0px 0px 5px rgba(36, 36, 36, 0.5));
+}
+div.card > div.feedback-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 60%;
+}
+div.card > div.feedback-actions > button{
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+div.card > div.feedback-actions > button:nth-child(2){
+    flex: 1;
+    background-color: #818181;
+    color: white;
+    border: 2px solid #000;
+}
+main section#FeedBack{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+main section#FeedBack > div.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+main section#FeedBack > div.cards-container div.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    height: 250px;
+    background: rgba(33, 41, 51, 0.75);
+    color: #fff;
+    border: 2px solid rgba(245, 245, 245, 0.75);
+    padding: 10px;
+    border-radius: 10px;
+}
+main section form{
+    min-width: 300px;
+    max-width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+main section form div{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+main section form :where(div input,div textarea){
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+main section form :where(div input,div textarea):focus{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+main section form div textarea{
+    width: 100%;
+    height: 100px;
+}
+main section form button{
+    width: 100%;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+main section form button::before{
+    width: 200%;
+    height: 60%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    background-color: rgba(245, 245, 245, 0.5);
+}
+main section form button::after{
+    width: 200%;
+    height: 60%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    background-color: rgba(245, 245, 245, 0.5);
+}
+main section form button:hover::before{
+    left: 110%;
+}
+main section form button:hover::after{
+    left: -10%;
+}
+footer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(33, 41, 51, 0.75);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+footer div div{
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer div div i{
+    font-size: 20px;
+    color: #fff;
+}
+footer div div label{
+    transform: scaleY(0) translateY(0%);
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+footer div i:hover ~ label{
+    transform: scaleY(1) translateY(-80px);
+    transition: transform .5s;
+    background-color: #fff;
+    color: #000;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
