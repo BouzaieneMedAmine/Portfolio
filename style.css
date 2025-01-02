@@ -81,16 +81,6 @@ main section{
     gap: 10px;
     padding: 20px;
 }
-.aboutMe h2{
-    display: flex;
-    text-align: center;
-    top: 100px;
-    left: 0;
-    font-size: 7rem;
-    z-index: -10;
-    color: rgba(255, 255, 255, 0.375);
-    filter: drop-shadow(0px 0px 5px white);
-}
 main section#AboutMe{
     display: flex;
     justify-content: space-evenly;
@@ -106,8 +96,10 @@ main section#AboutMe div img{
     filter: drop-shadow(0px 0px 5px rgba(36, 36, 36, 0.5));
 }
 main section#AboutMe div h2{
-    color: #fff;
-    font-size: 1.75rem;
+    color: rgba(255, 255, 255, 0.375);
+    font-size:3rem;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+    text-align: center;
 }
 main section#AboutMe div p{
     color: rgba(255, 255, 255, 0.6);
