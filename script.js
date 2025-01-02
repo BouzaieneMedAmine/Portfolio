@@ -2,6 +2,7 @@ let anchors = document.querySelectorAll('a.anchor');
 let containers = document.querySelectorAll('main > section');
 const cards = document.querySelectorAll('div.card');
 const feedbacksContainer = document.querySelector('div.feedbacks-container');
+let scrollToTopButton = document.querySelector('button.scroll-to-top');
 const feedbacks = [
     {
       id: 1,
@@ -45,6 +46,20 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+window.addEventListener("scroll",()=>{
+    let scroll = window.scrollY;
+    if(scroll > 100){
+        scrollToTopButton.style.display = 'block';
+    }else{
+        scrollToTopButton.style.display = 'none';
+    }
+})
+scrollToTopButton.addEventListener('click',()=>{
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+})
 feedbacks.forEach((item,idx)=>{
     let feedback = document.createElement('div');
     feedback.classList.add('card');
