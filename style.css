@@ -43,7 +43,6 @@ header nav{
 }
 header nav ul{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -85,25 +84,29 @@ main section#AboutMe{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 main section#AboutMe div{
     width: clamp(300px, 100%, 500px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 main section#AboutMe div img{
     width: 100%;
-    filter: drop-shadow(0px 0px 5px rgba(36, 36, 36, 0.5));
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.25));
 }
 main section#AboutMe div h2{
     color: rgba(255, 255, 255, 0.375);
     font-size:3rem;
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
-    text-align: center;
+    text-align: start;
+    width: 100%;
 }
 main section#AboutMe div p{
     color: rgba(255, 255, 255, 0.6);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 main section#Skills{
     display: flex;
@@ -314,6 +317,7 @@ main section form :where(div input,div textarea){
     outline: none;
     resize: none;
     background-color: transparent;
+    color: #fff;
 }
 main section form :where(div input,div textarea):focus{
     box-shadow: 0 0 5px rgba(163, 163, 163, 0.75);
@@ -524,4 +528,27 @@ footer button{
     z-index: -10;
     color: rgba(255, 255, 255, 0.375);
     filter: drop-shadow(0px 0px 5px white);
+}
+.buttons{
+    width: 250px;
+    display: flex;
+    gap: 1rem;
+
+
+}
+.buttons button{
+    flex: 1;
+    background:rgba(255, 255, 255, 0.375) ;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 15px;
+    border: 2px solid lightgray;
+
+}
+
+.leftbot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
